@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donors — Global Blood System</title>
+<link rel="stylesheet" href="donors.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>GBS</a>
+  <div class="nav-links">
+    <a href="donors.html" class="active">Donors</a>
+    <a href="storage.html">Storage</a>
+    <a href="monitoring.html">Monitoring</a>
+    <a href="hospitals.html">Hospitals</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="network.html">Network</a>
+  </div>
+</nav>
+
+<div class="page-wrap fade-up">
+  <a href="index.html" class="back-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to Overview
+  </a>
+
+  <div class="hero-row">
+    <div>
+      <div class="step-num">01</div>
+      <div class="tag"><span class="tag-dot"></span>Entry Point</div>
+      <h1>Blood<br><em>Donors</em></h1>
+      <p class="intro">The foundation of the global blood system. Every donation starts with a verified, digitally registered donor — ensuring safety, traceability, and trust across the entire supply chain.</p>
+      <div class="meta-pills">
+        <span class="pill red">Digital Registration</span>
+        <span class="pill">AI Screening</span>
+        <span class="pill">PDF Upload</span>
+        <span class="pill">Eligibility Check</span>
+      </div>
+      <button class="register-btn" onclick="openModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+        Register as Donor
+      </button>
+    </div>
+
+    <div class="visual-panel">
+      <div class="panel-label">Donor Journey</div>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="flow-content">
+            <div class="flow-title">Create Account</div>
+            <div class="flow-desc">Register online or via mobile. Basic identity and health profile created securely.</div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="flow-content">
+            <div class="flow-title">Upload Blood Analysis</div>
+            <div class="flow-desc">Submit recent blood test results as PDF. System validates document authenticity.</div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="flow-content">
+            <div class="flow-title">AI Eligibility Review</div>
+            <div class="flow-desc">Automated analysis cross-checks health markers, medications, and donor history against WHO criteria.</div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="flow-content">
+            <div class="flow-title">Approved & Scheduled</div>
+            <div class="flow-desc">Eligible donors receive a unique donor ID and can schedule at any partnered collection center.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-section">
+    <div class="detail-label">Key Features</div>
+    <div class="detail-grid">
+      <div class="detail-card">
+        <svg class="detail-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        <h3>Mobile-First</h3>
+        <p>Full donor registration and tracking available on any device. No paperwork required at any stage.</p>
+      </div>
+      <div class="detail-card">
+        <svg class="detail-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Privacy Protected</h3>
+        <p>All donor health data is encrypted end-to-end. Shared only with authorized collection centers and never with third parties.</p>
+      </div>
+      <div class="detail-card">
+        <svg class="detail-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <h3>Health Tracking</h3>
+        <p>Donors receive personalized health insights and reminders for next eligible donation window based on WHO guidelines.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="elig-block">
+    <div class="elig-title">AI Eligibility Criteria</div>
+    <div class="elig-grid">
+      <div class="elig-item"><span class="elig-dot green"></span><div class="elig-text"><strong>Age 18–65</strong>Within standard donation age range.</div></div>
+      <div class="elig-item"><span class="elig-dot green"></span><div class="elig-text"><strong>Weight ≥ 50 kg</strong>Minimum body weight for safe donation volume.</div></div>
+      <div class="elig-item"><span class="elig-dot green"></span><div class="elig-text"><strong>Hemoglobin ≥ 12.5 g/dL</strong>Adequate iron levels confirmed via blood test PDF.</div></div>
+      <div class="elig-item"><span class="elig-dot green"></span><div class="elig-text"><strong>No recent illness</strong>No fever or infection in the past 14 days.</div></div>
+      <div class="elig-item"><span class="elig-dot red-d"></span><div class="elig-text"><strong>No blood-borne diseases</strong>Automatic disqualification for HIV, Hepatitis B/C.</div></div>
+      <div class="elig-item"><span class="elig-dot red-d"></span><div class="elig-text"><strong>Cooling-off period</strong>Minimum 56 days between whole blood donations.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Overview
+  </a>
+  <a href="storage.html" class="next">
+    Collection & Storage
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<footer>
+  <span class="footer-left">© 2026 Global Blood System Initiative</span>
+  <div class="who-badge"><span>WHO</span> Certified Global Standard</div>
+</footer>
+
+<!-- ═══════ MODAL ═══════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+
+    <div class="modal-steps">
+      <div class="mstep active" id="mstep1"><span class="mstep-num">1</span><span class="mstep-label">Profile</span></div>
+      <div class="mstep-line"></div>
+      <div class="mstep" id="mstep2"><span class="mstep-num">2</span><span class="mstep-label">Health</span></div>
+      <div class="mstep-line"></div>
+      <div class="mstep" id="mstep3"><span class="mstep-num">3</span><span class="mstep-label">Analysis</span></div>
+      <div class="mstep-line"></div>
+      <div class="mstep" id="mstep4"><span class="mstep-num">4</span><span class="mstep-label">Result</span></div>
+      <button class="modal-close" onclick="closeModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="modal-body" id="step1">
+      <div class="modal-header">
+        <div class="modal-tag">Step 1 of 4</div>
+        <h2>Personal <em>Profile</em></h2>
+        <p>Fill in your basic information to begin registration.</p>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="firstName" placeholder="e.g. Sarah">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lastName" placeholder="e.g. Johnson">
+        </div>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" id="dob">
+        </div>
+        <div class="form-group">
+          <label>Biological Sex</label>
+          <select id="sex">
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <select id="country">
+            <option value="">Select country</option>
+            <option>United States</option><option>United Kingdom</option>
+            <option>Germany</option><option>France</option>
+            <option>Japan</option><option>Brazil</option>
+            <option>Australia</option><option>Canada</option><option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Phone (optional)</label>
+          <input type="tel" id="phone" placeholder="+1 000 000 0000">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span class="form-note">Your data is never stored or shared.</span>
+        <button class="btn-primary" onclick="goStep(2)">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="modal-body hidden" id="step2">
+      <div class="modal-header">
+        <div class="modal-tag">Step 2 of 4</div>
+        <h2>Health <em>Information</em></h2>
+        <p>Answer honestly — this helps us verify your eligibility safely.</p>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 70" min="30" max="200">
+        </div>
+        <div class="form-group">
+          <label>Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 175" min="100" max="250">
+        </div>
+        <div class="form-group">
+          <label>Blood Type (if known)</label>
+          <select id="bloodType">
+            <option value="">Unknown</option>
+            <option>O+</option><option>O−</option>
+            <option>A+</option><option>A−</option>
+            <option>B+</option><option>B−</option>
+            <option>AB+</option><option>AB−</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Last Donation Date</label>
+          <input type="date" id="lastDonation">
+        </div>
+      </div>
+      <div class="health-checks">
+        <div class="check-label">Health Declarations</div>
+        <div class="check-item">
+          <label class="toggle-wrap">
+            <input type="checkbox" id="noIllness">
+            <span class="toggle"></span>
+            <span class="toggle-text">I have not had fever or infection in the past 14 days</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <label class="toggle-wrap">
+            <input type="checkbox" id="noMeds">
+            <span class="toggle"></span>
+            <span class="toggle-text">I am not currently taking blood-thinning medications</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <label class="toggle-wrap">
+            <input type="checkbox" id="noDisease">
+            <span class="toggle"></span>
+            <span class="toggle-text">I have not been diagnosed with HIV, Hepatitis B or C</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <label class="toggle-wrap">
+            <input type="checkbox" id="noTravel">
+            <span class="toggle"></span>
+            <span class="toggle-text">I have not traveled to a malaria-endemic region in the past 3 months</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" onclick="goStep(1)">Back</button>
+        <button class="btn-primary" onclick="goStep(3)">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="modal-body hidden" id="step3">
+      <div class="modal-header">
+        <div class="modal-tag">Step 3 of 4</div>
+        <h2>Blood <em>Analysis</em></h2>
+        <p>Upload your recent blood test report. Our AI will scan it instantly.</p>
+      </div>
+
+      <div class="upload-zone" id="uploadZone" onclick="triggerUpload()">
+        <input type="file" id="pdfInput" accept=".pdf,image/*" style="display:none" onchange="handleFile(event)">
+        <div class="upload-idle" id="uploadIdle">
+          <div class="upload-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div class="upload-title">Drop your PDF here</div>
+          <div class="upload-sub">or click to browse — PDF or image, max 10 MB</div>
+          <div class="upload-formats"><span>PDF</span><span>JPG</span><span>PNG</span></div>
+        </div>
+        <div class="upload-preview hidden" id="uploadPreview">
+          <div class="file-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="file-info">
+            <span class="file-name" id="fileName">report.pdf</span>
+            <span class="file-size" id="fileSize">— MB</span>
+          </div>
+          <button class="file-remove" onclick="removeFile(event)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="scan-panel hidden" id="scanPanel">
+        <div class="scan-header">
+          <span class="scan-title">AI Analysis</span>
+          <span class="scan-status" id="scanStatus">Ready</span>
+        </div>
+        <div class="scan-lines">
+          <div class="scan-line"><span class="sl-label">Document format</span><span class="sl-val pending" id="sl1">—</span></div>
+          <div class="scan-line"><span class="sl-label">Hemoglobin level</span><span class="sl-val pending" id="sl2">—</span></div>
+          <div class="scan-line"><span class="sl-label">White blood cell count</span><span class="sl-val pending" id="sl3">—</span></div>
+          <div class="scan-line"><span class="sl-label">Iron / Ferritin</span><span class="sl-val pending" id="sl4">—</span></div>
+          <div class="scan-line"><span class="sl-label">Blood-borne markers</span><span class="sl-val pending" id="sl5">—</span></div>
+          <div class="scan-line"><span class="sl-label">Document authenticity</span><span class="sl-val pending" id="sl6">—</span></div>
+        </div>
+        <button class="btn-scan" id="btnScan" onclick="runAnalysis()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Run AI Analysis
+        </button>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-ghost" onclick="goStep(2)">Back</button>
+        <button class="btn-primary" id="btnStep3Next" disabled onclick="goStep(4)">
+          See Result <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="modal-body hidden" id="step4">
+      <div class="result-wrap" id="resultWrap"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+let fileSelected = false;
+let analysisComplete = false;
+
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setStep(1);
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+function setStep(n) {
+  for (let i = 1; i <= 4; i++) {
+    const body = document.getElementById('step' + i);
+    const ms   = document.getElementById('mstep' + i);
+    body.classList.add('hidden');
+    ms.classList.remove('active','done');
+    if (i < n) ms.classList.add('done');
+  }
+  document.getElementById('step' + n).classList.remove('hidden');
+  document.getElementById('mstep' + n).classList.add('active');
+}
+
+function goStep(n) {
+  if (n === 4) { buildResult(); }
+  setStep(n);
+}
+
+/* ── FILE UPLOAD ── */
+function triggerUpload() {
+  if (!fileSelected) document.getElementById('pdfInput').click();
+}
+
+function handleFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  fileSelected = true;
+  document.getElementById('fileName').textContent = file.name;
+  document.getElementById('fileSize').textContent = (file.size / 1024 / 1024).toFixed(2) + ' MB';
+  document.getElementById('uploadIdle').classList.add('hidden');
+  document.getElementById('uploadPreview').classList.remove('hidden');
+  document.getElementById('scanPanel').classList.remove('hidden');
+  document.getElementById('uploadZone').style.cursor = 'default';
+  analysisComplete = false;
+  document.getElementById('btnStep3Next').disabled = true;
+  resetScan();
+}
+
+function removeFile(e) {
+  e.stopPropagation();
+  fileSelected = false;
+  analysisComplete = false;
+  document.getElementById('pdfInput').value = '';
+  document.getElementById('uploadIdle').classList.remove('hidden');
+  document.getElementById('uploadPreview').classList.add('hidden');
+  document.getElementById('scanPanel').classList.add('hidden');
+  document.getElementById('uploadZone').style.cursor = 'pointer';
+  document.getElementById('btnStep3Next').disabled = true;
+  resetScan();
+}
+
+function resetScan() {
+  for (let i = 1; i <= 6; i++) {
+    const el = document.getElementById('sl' + i);
+    el.textContent = '—';
+    el.className = 'sl-val pending';
+  }
+  const ss = document.getElementById('scanStatus');
+  ss.textContent = 'Ready';
+  ss.className = 'scan-status';
+  const btn = document.getElementById('btnScan');
+  btn.disabled = false;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Run AI Analysis';
+}
+
+/* ── AI ANALYSIS ── */
+const scanData = [
+  { text: 'Valid PDF ✓',       ok: true  },
+  { text: '14.2 g/dL ✓',      ok: true  },
+  { text: '6,800 /µL ✓',      ok: true  },
+  { text: '82 ng/mL ✓',       ok: true  },
+  { text: 'Clear ✓',          ok: true  },
+  { text: 'Verified ✓',       ok: true  },
+];
+
+function runAnalysis() {
+  const btn = document.getElementById('btnScan');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span> Scanning…';
+  const ss = document.getElementById('scanStatus');
+  ss.textContent = 'Processing';
+  ss.className = 'scan-status scanning';
+
+  scanData.forEach((r, i) => {
+    setTimeout(() => {
+      const el = document.getElementById('sl' + (i + 1));
+      el.textContent = r.text;
+      el.className = 'sl-val ' + (r.ok ? 'ok' : 'fail');
+      if (i === scanData.length - 1) {
+        setTimeout(() => {
+          ss.textContent = 'Complete';
+          ss.className = 'scan-status done';
+          analysisComplete = true;
+          document.getElementById('btnStep3Next').disabled = false;
+          btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Analysis Complete';
+        }, 300);
+      }
+    }, 350 + i * 480);
+  });
+}
+
+/* ── RESULT ── */
+function buildResult() {
+  const firstName = document.getElementById('firstName').value.trim() || 'Donor';
+  const bloodType = document.getElementById('bloodType').value || 'Unknown';
+  const weight    = parseFloat(document.getElementById('weight').value) || 0;
+  const donorId   = 'GBS-' + Math.random().toString(36).substring(2,7).toUpperCase();
+
+  const allChecks = document.getElementById('noIllness').checked &&
+                    document.getElementById('noMeds').checked &&
+                    document.getElementById('noDisease').checked;
+  const eligible = weight >= 50 && allChecks && analysisComplete;
+
+  document.getElementById('resultWrap').innerHTML = `
+    <div class="result-approved">
+      <div class="result-icon${eligible ? '' : ' red'}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          ${eligible
+            ? '<polyline points="20 6 9 17 4 12"/>'
+            : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'}
+        </svg>
+      </div>
+      <div class="result-badge${eligible ? '' : ' red'}">${eligible ? 'Approved' : 'Not Eligible'}</div>
+      <h2>${eligible ? 'Welcome, ' : 'Sorry, '}<em>${firstName}</em></h2>
+      <p class="result-sub">${eligible
+        ? 'Your profile and blood analysis passed all eligibility checks. You are registered in the Global Blood System.'
+        : 'Based on your information, you do not currently meet all eligibility criteria. You may re-apply after addressing the flagged items.'}</p>
+
+      ${eligible ? `
+      <div class="result-card">
+        <div class="rc-row"><span class="rc-key">Donor ID</span><span class="rc-val mono">${donorId}</span></div>
+        <div class="rc-row"><span class="rc-key">Blood Type</span><span class="rc-val">${bloodType}</span></div>
+        <div class="rc-row"><span class="rc-key">Status</span><span class="rc-val" style="color:#2ECC71">Eligible to Donate</span></div>
+        <div class="rc-row"><span class="rc-key">Next Step</span><span class="rc-val">Schedule at a collection center</span></div>
+      </div>` : ''}
+
+      <div class="result-checks">
+        <div class="rcheck ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Identity verified</div>
+        <div class="rcheck ${allChecks ? 'ok':'fail'}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            ${allChecks ? '<polyline points="20 6 9 17 4 12"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'}
+          </svg>Health declarations
+        </div>
+        <div class="rcheck ${analysisComplete ? 'ok':'fail'}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            ${analysisComplete ? '<polyline points="20 6 9 17 4 12"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'}
+          </svg>Blood analysis ${analysisComplete ? 'passed' : 'not completed'}
+        </div>
+        <div class="rcheck ${weight>=50 ? 'ok':'fail'}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            ${weight>=50 ? '<polyline points="20 6 9 17 4 12"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'}
+          </svg>Weight ${weight>=50 ? '≥ 50 kg ✓' : '< 50 kg — ineligible'}
+        </div>
+      </div>
+
+      <div class="result-note">This is a demonstration. No data has been saved or transmitted.</div>
+      <button class="btn-primary" onclick="closeModal()" style="margin-top:28px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Done
+      </button>
+    </div>
+  `;
+}
+
+/* ── DRAG & DROP ── */
+const zone = document.getElementById('uploadZone');
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+zone.addEventListener('drop', e => {
+  e.preventDefault();
+  zone.classList.remove('drag-over');
+  if (!fileSelected) {
+    const file = e.dataTransfer.files[0];
+    if (file) handleFile({ target: { files: [file] } });
+  }
+});
+</script>
+
+</body>
+</html>
