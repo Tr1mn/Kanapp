@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection & Storage — Global Blood System</title>
+<link rel="stylesheet" href="storage.css"></head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>GBS</a>
+  <div class="nav-links">
+    <a href="donors.html">Donors</a>
+    <a href="storage.html" class="active">Storage</a>
+    <a href="monitoring.html">Monitoring</a>
+    <a href="hospitals.html">Hospitals</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="network.html">Network</a>
+  </div>
+</nav>
+
+<div class="page-wrap fade-up">
+  <a href="index.html" class="back-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to Overview
+  </a>
+
+  <div class="hero-row">
+    <div>
+      <div class="step-num">02</div>
+      <div class="tag"><span class="tag-dot"></span>Infrastructure</div>
+      <h1>Collection<br>& <em>Storage</em></h1>
+      <p class="intro">Blood units are collected at certified medical centers and stored under strictly controlled conditions. Every unit is digitally tagged, monitored, and traceable from collection to transfusion.</p>
+      <div class="meta-pills">
+        <span class="pill red">QR Code Tagging</span>
+        <span class="pill">+2…+6 °C</span>
+        <span class="pill">Medical Centers</span>
+        <span class="pill">Blood Banks</span>
+      </div>
+    </div>
+
+    <div class="visual-panel">
+      <div class="panel-label">Storage Conditions</div>
+      <div class="temp-display">
+        <div class="temp-range">+2 <span style="color:var(--muted)">to</span> +6<span class="temp-unit">°C</span></div>
+        <div class="temp-label">Required Storage Range — Whole Blood</div>
+      </div>
+      <div class="temp-bar-wrap">
+        <div class="temp-bar-labels"><span>0°C</span><span>+2°C</span><span>+6°C</span><span>+10°C</span></div>
+        <div class="temp-bar">
+          <div class="temp-bar-danger-left"></div>
+          <div class="temp-bar-fill"></div>
+          <div class="temp-bar-danger-right"></div>
+        </div>
+      </div>
+      <div class="storage-stats">
+        <div class="storage-stat">
+          <span class="storage-stat-val">42 days</span>
+          <span class="storage-stat-key">Max shelf life</span>
+        </div>
+        <div class="storage-stat">
+          <span class="storage-stat-val">24/7</span>
+          <span class="storage-stat-key">Temp monitoring</span>
+        </div>
+        <div class="storage-stat">
+          <span class="storage-stat-val">QR</span>
+          <span class="storage-stat-key">Unit tagging</span>
+        </div>
+        <div class="storage-stat">
+          <span class="storage-stat-val">±0.2°C</span>
+          <span class="storage-stat-key">Accuracy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="qr-section">
+    <div class="section-label">QR Code System</div>
+    <div class="qr-grid">
+      <div class="qr-card">
+        <div class="qr-card-num">Feature 01</div>
+        <h3>Unique Unit Identity</h3>
+        <p>Every blood bag receives a QR code at collection. The code encodes blood type, donor ID, collection date, center location, and batch number — all linked to the central platform.</p>
+      </div>
+      <div class="qr-card">
+        <div class="qr-card-num">Feature 02</div>
+        <h3>Scan-at-Every-Step</h3>
+        <p>QR codes are scanned at collection, during storage checks, at dispatch, and at hospital receipt. Each scan logs a timestamped entry in the immutable audit trail.</p>
+      </div>
+      <div class="qr-card">
+        <div class="qr-card-num">Feature 03</div>
+        <h3>Expiry Alerts</h3>
+        <p>Platform automatically flags units approaching their 42-day expiry window. Redistribution orders are triggered to minimize wastage across the network.</p>
+      </div>
+      <div class="qr-card">
+        <div class="qr-card-num">Feature 04</div>
+        <h3>Instant Recall</h3>
+        <p>In the event of a donor health update or contamination flag, any affected unit can be instantly identified and recalled across all locations using the QR link.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="standards-block">
+    <div class="standards-title">Storage Compliance Standards</div>
+    <div class="standards-list">
+      <div class="standard-row">
+        <span class="standard-name">Whole blood — +2 to +6 °C for up to 42 days</span>
+        <span class="standard-badge active">Active</span>
+      </div>
+      <div class="standard-row">
+        <span class="standard-name">Platelets — +20 to +24 °C, agitated, up to 7 days</span>
+        <span class="standard-badge active">Active</span>
+      </div>
+      <div class="standard-row">
+        <span class="standard-name">Fresh Frozen Plasma — below −18 °C, up to 12 months</span>
+        <span class="standard-badge active">Active</span>
+      </div>
+      <div class="standard-row">
+        <span class="standard-name">Cryoprecipitate — below −18 °C, up to 12 months</span>
+        <span class="standard-badge active">Active</span>
+      </div>
+      <div class="standard-row">
+        <span class="standard-name">WHO GMP Facility Certification — required</span>
+        <span class="standard-badge req">Required</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav">
+  <a href="donors.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Donors
+  </a>
+  <a href="monitoring.html" class="next">
+    Monitoring Platform
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<footer>
+  <span class="footer-left">© 2026 Global Blood System Initiative</span>
+  <div class="who-badge"><span>WHO</span> Certified Global Standard</div>
+</footer>
+</body>
+</html>
